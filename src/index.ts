@@ -7,8 +7,8 @@ const proxyList = [
     "https://rsshub.feeded.xyz/", // 胜之不易
     "https://hub.slarker.me/", // Slarker
     "https://rsshub.liumingye.cn/", //刘明野
-    "https://rsshub-instance.zeabur.app/", // Zeabur
-    "https://rss.fatpandac.com/", // Fatpandac
+    // "https://rsshub-instance.zeabur.app/", // Zeabur
+    // "https://rss.fatpandac.com/", // Fatpandac
     "https://rsshub.pseudoyu.com/", // pseudoyu
     "https://rsshub.atgw.io/", // limfoo
     "https://rsshub.rss.tips/", // 	AboutRSS
