@@ -1,13 +1,26 @@
-addEventListener("fetch", event => {
-    event.respondWith(handleRequest(event.request))
-})
+addEventListener("fetch", (event) => {
+    event.respondWith(handleRequest(event.request));
+});
 
 const proxyList = [
-    // "https://rss.shab.fun/",
-    // "https://rsshub.rssforever.com/",
-    "https://vercel.mizuno2023.xyz/",
-    "https://rsshub.canihave.fun/",
-    "https://rsshub.app/",
+    "https://rsshub.rssforever.com/", // Stille
+    "https://rsshub.feeded.xyz/", // 胜之不易
+    "https://hub.slarker.me/", // Slarker
+    "https://rsshub.liumingye.cn/", //刘明野
+    "https://rsshub-instance.zeabur.app/", // Zeabur
+    "https://rss.fatpandac.com/", // Fatpandac
+    "https://rsshub.pseudoyu.com/", // pseudoyu
+    "https://rsshub.atgw.io/", // limfoo
+    "https://rsshub.rss.tips/", // 	AboutRSS
+    "https://rsshub.mubibai.com/", // Kai
+    "https://rsshub.ktachibana.party/", // KTachibanaM
+    "https://rsshub.woodland.cafe/", // untitaker
+    "https://rsshub.aierliz.xyz/", // 麦当狗
+    "https://rss.owo.nz/", //  Vincent Yang
+    "https://rss.wudifeixue.com/", // wudifeixue
+    "https://yangzhi.app/", // 仰止
+    "https://rsshub.viki.moe/", // 	Viki
+    "https://rsshub.app/", // 官方
 ];
 
 async function handleRequest(request: Request<unknown, CfProperties<unknown>>) {
@@ -18,7 +31,7 @@ async function handleRequest(request: Request<unknown, CfProperties<unknown>>) {
     // 随机选择一个代理
     let proxyHost = proxyList[Math.floor(Math.random() * proxyList.length)];
     // 去除代理 URL 的最后一个 /
-    proxyHost = proxyHost.replace(/\/$/, '');
+    proxyHost = proxyHost.replace(/\/$/, "");
     // 拼接代理 URL
     const proxyUrl = proxyHost + path;
 
@@ -42,7 +55,6 @@ async function handleRequest(request: Request<unknown, CfProperties<unknown>>) {
         // 返回成功
         return curRes;
     }
-
 }
 
 // bilibili/user/video/44744006
